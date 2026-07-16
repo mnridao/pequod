@@ -1,14 +1,20 @@
-pub struct Boundaries {
-    north: BoundaryType, 
-    east: BoundaryType, 
-    south: BoundaryType, 
-    west: BoundaryType
+pub enum DomainTopology {
+    ClosedBasin {
+        north: WallCondition,
+        south: WallCondition,
+        east: WallCondition, 
+        west: WallCondition,
+    },
+    ZonalChannel {
+        north: WallCondition,
+        south: WallCondition,
+    }, 
+    DoublyPeriodic,
 }
 
 // Each boundary gets its own BoundaryType
-pub enum BoundaryType {
+pub enum WallCondition {
     Slip, 
     NoSlip, 
-    PartialSlip, 
-    Periodic // Maybe not implemented for now
+    PartialSlip {slip_length: f64}, 
 }

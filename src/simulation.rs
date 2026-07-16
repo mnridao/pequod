@@ -1,20 +1,21 @@
-use crate::geometry::grid::Grid;
-use crate::geometry::boundaries::Boundaries;
+use crate::geometry::domain::Domain;
 
 pub struct Simulation {
-    // grid: Grid,
-    // boundaries: Boundaries,
+    // domain: Domain,
 
     // // Solver settings 
     // nt: usize,
     // dt: f64,
 
     // TODO: 
-    // Domain type (contains grid, boundaries, )
-    // QGModel type (contains access to equations)
-    // CabaretStepper type 
-    // Fields (mutable)
+    // Domain type (owns fixed geometry, e.g. grid, boundaries, layers)
+    // QGModel type (should describe the physical equations. Should own physical model parameters, maybe not the stencils themselves)
+    // CabaretStepper type (should describe the numerical time integration) 
+    // ModelStates (mutable)
     // Clock (keeps track of the simulation time)
+    // OutputManager
+
+    // Logger (observer pattern, AOP, proxy, decorator)
 }
 
 impl Simulation {

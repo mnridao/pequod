@@ -1,14 +1,12 @@
 pub struct Grid {
     nx: usize,
     ny: usize,
-    nz: usize,
-    dx: f64,
-    dy: f64
+    basinscale: f64,
 }
 
 impl Grid {
-    pub fn new(nx: usize, ny: usize, nz: usize, dx: f64, dy: f64) -> Self {
-        Self {nx, ny, nz, dx, dy}
+    pub fn new(nx: usize, ny: usize, basinscale: f64) -> Self {
+        Self {nx, ny, basinscale}
     }
 
     pub fn nx(&self) -> usize {
@@ -19,15 +17,7 @@ impl Grid {
         self.ny
     }
 
-    pub fn nz(&self) -> usize {
-        self.nz
-    }
-
-    pub fn dx(&self) -> f64 {
-        self.dx
-    }
-
-    pub fn dy(&self) -> f64 {
-        self.dy
+    pub fn basinscale(&self) -> f64 {
+        self.basinscale
     }
 }
