@@ -1,9 +1,9 @@
-[domain.Grid]
+[domain.grid]
 nx = 512 
 ny = 512 
 basinscale = 3840000.0
 layer_thickness = [250.0, 750.0, 3000.0]
 
-[solver]
+[time]
 dt = 18000
 nt = 10 

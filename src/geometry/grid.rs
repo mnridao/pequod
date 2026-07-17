@@ -5,7 +5,9 @@ pub struct Grid {
 }
 
 impl Grid {
+
     pub fn new(nx: usize, ny: usize, basinscale: f64) -> Self {
+        // TODO: error handling
         Self {nx, ny, basinscale}
     }
 

@@ -1,6 +1,11 @@
 use crate::geometry::domain::Domain;
+use crate::config::SimulationConfig;
 
 pub struct Simulation {
+
+    // simulation_config: SimulationConfig,
+    // domain: Domain,
+
     // domain: Domain,
 
     // // Solver settings 
@@ -19,20 +24,18 @@ pub struct Simulation {
 }
 
 impl Simulation {
-    // pub fn new(grid: Grid, boundaries: Boundaries, nt: usize, dt: f64) -> Self {
-    //     println!("Creating new Simulation type");
-    //     Self {grid, boundaries, nt, dt}
-    // }
-
-    pub fn new() -> Self {
+    pub fn new(config: SimulationConfig) -> Self {
         println!("Creating new Simulation");
+        println!("{config:#?}");
         Self {}
+
+    //     let domain = Domain{
+
+    //     }
+
     }
 
-    pub fn run(&self) {
-        println!("Initialising model.");
-        println!("Running Cabaret algorithm.");
-        println!("Saving output.");
-        println!("Model finished running.")
+    pub fn run(&self) -> () {
+        println!("Pequod is not implemented yet.")
     }
 }
